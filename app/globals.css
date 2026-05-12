@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F9F6F0;
+  color: #2C2C2E;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-spa-purple hover:bg-spa-purple-dark text-white font-sans font-medium px-8 py-3 rounded-sm tracking-wider transition-all duration-300;
+  }
+
+  .card-metric {
+    @apply bg-white rounded-sm border border-spa-cream-dark p-6 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .badge-up {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-50 text-spa-gold-dark border border-yellow-200;
+  }
+
+  .section-divider {
+    @apply border-t border-spa-cream-dark my-12;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 text-sm text-spa-charcoal-light;
+  }
+
+  .table-header {
+    @apply px-6 py-3 text-xs font-medium text-spa-purple uppercase tracking-widest;
+  }
+}
